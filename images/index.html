@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Home-Made Bootstrap Carousel (Pure CSS Carousel)</title>
+  <link rel='stylesheet' href='https://fonts.gstatic.com'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Open+Sans&amp;display=swap'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<body>
+    <div class="document-center">
+      <!--This carousel-container only exists so we can do the 
+      aspect ratio tricks in CSS-->
+      <div class="carousel-container">
+        <div class="carousel" id="carousel-1" auto-scroll="7000">
+          <!--The uppermost screen will appear first. This is due to JavaScript-->
+          <section class="carousel-screen">
+            <img src="https://www.w3schools.com/bootstrap/chicago.jpg" alt="Chicago Band" />
+            <section class="text-container">
+              <p>Chicago</p>
+              <p>Thank you, Chicago!</p>
+            </section>
+          </section>
+          <section class="carousel-screen">
+            <img src="https://www.w3schools.com/bootstrap/ny.jpg" alt="New York" />
+            <section class="text-container">
+              <p>New York</p>
+              <p>We love the Big Apple!</p>
+            </section>
+          </section>
+          <section class="carousel-screen">
+            <img src="https://www.w3schools.com/bootstrap/la.jpg" alt="Los Angeles" />
+            <section class="text-container">
+              <p>Los Angeles</p>
+              <p>LA is always so much fun!</p>
+            </section>
+          </section>
+          <!--These are not screens. They will always be on carousel-->
+          <section class="circle-container">
+            <!--These 'circles' need to match the number of carousel screens-->
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+          </section>
+          <div class="left-arrow">
+            <span class="chevron left"></span>
+          </div>
+          <div class="right-arrow">
+            <span class="chevron right"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="carousel-1-code.js"></script>
+    <!--Script. Do not touch!-->
+  </body>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
