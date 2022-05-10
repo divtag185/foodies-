@@ -1,0 +1,975 @@
+
+/*GENERAL CODE CSS STARTS HERE*/
+*::selection{
+    background-color: orangered;
+    color: white;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.5s linear;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: ghostwhite;
+    background-image: url(../images/home_bg.png);
+    overflow-x: hidden;
+}
+
+
+section {
+    margin: 0px;
+    padding: 100px 0px 50px 0px;
+}
+
+section h1 {
+    text-align: center;
+    font-size: 300%;
+    padding: 5%;
+}
+
+section .main {
+    margin: 20px 5%;
+    padding: 20px 2%;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    border-radius: 2%;
+}
+
+.orangered {
+    color: orangered;
+}
+/*GENERAL CODE CSS ENDS HERE*/
+  
+
+
+
+
+/*LOADER IMAGE CSS STARTS HERE*/
+.loader-container {
+    z-index: 1000;
+    position: fixed;
+    top: 0; bottom: 0; left: 0; right: 0;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.loader-container.fade-out {
+    top: -120%;
+}
+
+.loader-container img {
+    width: 100px;
+    height: 100px;
+    color: orangered;
+}
+/*LOADER IMAGE CSS ENDS HERE*/
+
+
+
+
+
+/*NAVIGATION BAR CSS CODE BEGINS HERE*/
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1% 2%;
+    box-shadow: 0px 0px 15px #666;
+    height: auto;
+    position: fixed;
+    top: 0;
+    background-color: white;
+    color: #000;
+    z-index: 10;
+}
+
+nav .logo {
+    font-size: 200%;
+    color: #000;
+    font-weight: bold;
+}
+
+nav .fa-burger {
+    font-size: 150%;
+    color: orangered
+}
+
+nav #menu_bar {
+   cursor: pointer;
+   font-size: 35px;
+   color: #000;
+   border-radius: 5px;
+   padding: 12px 4px 6px 4px;
+   display: none;
+   
+}
+
+nav ul {
+    font-size: 120%;
+}
+
+nav ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 1.5vh;
+}
+
+nav ul li a {
+    color: #000;
+}
+
+nav ul li a:hover {
+    color: orangered;
+}
+/*NAVIGATION BAR CSS CODE ENDS HERE*/
+
+
+
+
+
+/*HOME SECTION CSS CODE STARTS HERE*/
+#home {
+    margin: 90px 2% 0 2%;
+    height: 550px;
+    box-shadow: 3px 3px 15px grey;
+    position: relative;
+}
+
+#home .slides {
+    position: absolute;
+    top: 0; bottom: 0; right: 0; left: 0;
+    height: auto;
+}
+
+#home #slide_1 {
+    top: 0; bottom: 0; left: 0; right: 0;
+    z-index: 3;
+    animation: float_3 25s ease-in-out infinite;  
+    padding: 50px 5%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: white;
+}
+
+
+@keyframes float_3 {
+    0% {
+        
+        opacity: 1;
+    }
+
+    33% {
+
+        opacity: 1;
+    }
+
+    35% {
+        opacity: 0;
+    }
+
+    67% {
+    
+        opacity: 0;
+    }
+
+    95% {
+        opacity: 0;
+    }
+
+    100% {
+    
+        opacity: 1;
+    }
+}
+
+#home #slide_1 .writeup {
+    flex: 1 1 375px;
+    padding-top: 10%;
+}
+
+#home #slide_1 .writeup p {
+    text-align: left;
+}
+
+#home #slide_1 .writeup h1 {
+    text-align: left;
+    padding: 0;
+}
+
+#home #slide_1 img {
+    width: 180px;
+    height: 400px;
+    flex: 1 1 375px;
+    animation: float 2s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(-3rem);
+    }
+    50% {
+        transform: translateY(0rem);
+    }
+    100% {
+        transform: translateY(-3rem);
+    }
+}
+
+#home #slide_1 a {
+    margin: 10px;
+    padding: 1rem 5%;
+    font-weight: bolder;
+    background-color: orangered;
+    color: ghostwhite;
+}
+
+#home #slide_1 a:hover {
+    background-color: orange;
+    box-shadow: 0px 0px 10px lightgrey;
+}
+
+#home #slide_2 {
+    top: 0; bottom: 0; left: 0; right: 0;
+    z-index: 2;
+    animation: float_2 25s ease-in-out infinite; 
+    padding: 75px 15%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: white;
+    background-image: url(../images/slide_2.png);
+    background-repeat: no-repeat;
+    background-position: bottom left;
+}
+
+#home #slide_2 .writeup, 
+#home #slide_3 .writeup {
+    width: 60%;
+    position: absolute;
+    top: 2rem; right: 5%;
+}
+
+#home #slide_2 .writeup h1,
+#home #slide_3 .writeup h1 {
+    text-align: right;
+}
+
+#home #slide_2 .writeup p,
+#home #slide_3 .writeup p {
+    text-align: right;
+}
+
+@keyframes float_2 {
+    0% {
+        
+        opacity: 0;
+    }
+
+    33% {
+
+        opacity: 0.8;
+    }
+
+    35% {
+        opacity: 1;
+    }
+
+    67% {
+    
+        opacity: 1;
+    }
+
+    70% {
+        opacity: 0;
+    }
+
+    95% {
+        opacity: 0;
+    }
+
+    100% {
+    
+        opacity: 0;
+    }
+
+}
+
+
+#home #slide_3 {
+    top: 0; bottom: 0; left: 0; right: 0;
+    z-index: 1;    
+    animation: float_1 25s ease-in-out infinite; 
+    padding: 50px 5%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: white;
+    background-image: url(../images/slide_3.png);
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: 400px 500px;
+}
+
+
+
+
+
+@keyframes float_1 {
+    0% {
+        
+        opacity: 0;
+    }
+
+    33% {
+
+        opacity: 0;
+    }
+
+    35% {
+        opacity: 0;
+    }
+
+    67% {
+    
+        opacity: 0.01;
+    }
+
+    70% {
+        opacity: 1;
+    }
+
+    95% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+#home #slide_3 img {
+    width: 150px;
+    height: 400px;
+    flex: 1 1 375px;
+    border: 2px solid green;
+}
+
+#home #slide_3 .writeup {
+    flex: 1 1 375px;
+}
+/*HOME SECTION CSS CODE ENDS HERE*/
+
+
+
+
+
+/*OUR SPECIALTY SECTION CSS CODE BEGINS HERE*/
+#specialty .main .box
+ {
+    flex: 1 1 20rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px grey;
+    border: 10px solid white;
+    cursor: pointer;
+    border-radius: 0.5rem;
+}
+
+#specialty .main .box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: -100%; left: 0;
+}
+
+#specialty .main .box .content {
+    background-color: #FFF;
+    text-align: center;
+    padding: 10% 5%;
+    height: 100%;
+}
+
+#specialty .main .box:hover img {
+    top: 0;
+}
+
+#specialty .main .box .content .fa-solid {
+    font-size: 300%;
+    color: orangered;
+}
+
+#specialty .main .box .content h3 {
+    font-size: 200%;
+    color: #333;
+}
+
+#specialty .main .box .content p {
+    
+    color: #666;
+}
+/*OUR SPECIALTY SECTION CSS CODE ENDS HERE*/
+
+
+
+
+
+/*MOST POPULAR FOODS SECTION CSS CODE BEGINS HERE*/
+#popular .main .pop {
+    flex: 1 1 20rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px grey;
+    border: 10px solid white;
+    background-color: white;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    transition: all 0.5s linear;
+    -webkit-transition: all 0.5s linear;
+}
+
+#popular .main .pop:hover {
+    box-shadow: 0px 0px 20px orangered;
+    transform: scale(1.1);
+    z-index: 5;
+}
+
+#popular .main .pop .img {
+    width: 90%;
+    height: 200px;
+    margin: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+#popular .main .pop .img .price {
+    color: white;
+    background-color: orangered;
+    position: absolute;
+    left: 2%; top: 15px;
+    padding: 5%;
+    border-radius: 5%;
+    font-weight: bolder;
+}
+
+#popular .main .pop .content {
+    text-align: center;
+    margin: 25px auto;
+    width: 85%;
+    font-size: 120%;
+}
+
+#popular .main .pop .content h3 {
+    width: 100%;
+    margin: auto;
+    font-size: 120%;
+    margin-bottom: 20px;
+}
+
+#popular .main .pop .stars {
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+#popular .main .pop .stars .fas, #popular .main .pop .stars .far {
+    color: gold;
+    padding: 10px 0px;
+}
+
+#popular .main .pop .content a {
+    color: orangered;
+    border: 3px solid orangered;
+    padding: 5px 5%;
+    border-radius: 5%;
+}
+
+#popular .main .pop .content a:hover {
+    color: white;
+    background-color: orangered;
+}
+
+#img_1 {
+    background-image: url(../images/pizza/pizza_2.jpg);
+}
+
+#img_2 {
+    background-image: url(../images/burgers/burger_4.jpg);
+}
+
+#img_3 {
+    background-image: url(../images/ice_cream/ice_cream_9.jpg);
+}
+
+#img_4 {
+    background-image: url(../images/cake/cake_1.jpg);
+}
+
+#img_5 {
+    background-image: url(../images/cake/cupcake_1.jpg);
+}
+
+#img_6 {
+    background-image: url(../images/beverages/coffee_1.jpg);
+}
+/*MOST POPULAR FOODS SECTION CSS CODE ENDS HERE*/
+
+
+
+
+
+/*HOW IT WORKS SECTION CSS CODE STARTS HERE*/
+#how_it_works .main {
+    margin: 20px 5%;
+    padding: 0%;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#how_it_works .main .steps
+ {
+    flex: 1 1 200px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#how_it_works .main .steps img {
+    background-color: orangered;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 10px solid white;
+    box-shadow: 0px 0px 10px lightgrey;
+}
+
+#how_it_works .main .steps img:hover {
+    background-color: orange;
+}
+
+#how_it_works .main .steps h3 {
+    color: black;
+    font-size: 150%;
+}
+/*HOW IT WORKS SECTION CSS CODE ENDS HERE*/
+
+
+
+
+
+/*OUR FOOD GALLERY CSS CODE STARTS HERE*/
+#gallery .main .gal {
+    flex: 1 1 20rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px grey;
+    border: 10px solid white;
+    cursor: pointer;
+    border-radius: 0.5rem;
+}
+
+#gallery .main .gal .drop {
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0.85);
+    transform: translateY(-100%);
+    padding: 10% 5%;
+    text-align: center;
+    font-size: 150%;
+}
+
+#gallery .main .gal:hover .drop {
+    transform: translateY(0%);
+}
+
+
+
+#gallery .main .gal .drop h3  {
+    line-height: 2em;
+}
+
+#gallery .main .gal .drop p {
+    font-size: 75%;
+}
+
+#gallery .main .gal .drop a {
+    text-decoration: none;
+    font-size: 60%;
+    margin-top: 50px;
+    padding: 10px 5px;
+    border-radius: 10%;
+    color: orangered;
+    background-color: none;
+    border: 2px solid orangered;
+    font-weight: bold;
+}
+
+#gallery .main .gal .drop a:hover {
+    color: white;
+    background-color: orangered;
+}
+
+#gallery .main .gal {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#gallery .main #gal_1 {
+    background-image: url(../images/beverages/coffee_1.jpg); 
+}
+
+#gallery .main #gal_2 {
+    background-image: url(../images/burgers/burger_2.jpg); 
+}
+
+#gallery .main #gal_3 {
+    background-image: url(../images/cake/cake_5.jpg); 
+}
+
+#gallery .main #gal_4 {
+    background-image: url(../images/ice_cream/ice_cream_10.jpg); 
+}
+
+#gallery .main #gal_5 {
+    background-image: url(../images/ice_tea/ice_tea_1.jpg); 
+}
+
+#gallery .main #gal_6 {
+    background-image: url(../images/juices/juices.jpg); 
+}
+
+#gallery .main #gal_7 {
+    background-image: url(../images/pizza/pizza_1.jpg); 
+}
+
+#gallery .main #gal_8 {
+    background-image: url(../images/beverages/milk_3.jpg); 
+}
+
+#gallery .main #gal_9 {
+    background-image: url(../images/burgers/burger_3.jpg); 
+}
+
+#gallery .main #gal_10 {
+    background-image: url(../images/cake/cupcake_1.jpg); 
+}
+
+#gallery .main #gal_11 {
+    background-image: url(../images/ice_cream/ice_cream_7.jpg); 
+}
+
+#gallery .main #gal_12 {
+    background-image: url(../images/ice_tea/ice_tea_4.jpg); 
+}
+
+#gallery .main #gal_13 {
+    background-image: url(../images/juices/orange_juice_2.jpg); 
+}
+
+#gallery .main #gal_14 {
+    background-image: url(../images/pizza/pizza_3.jpg); 
+}
+
+#gallery .main #gal_15 {
+    background-image: url(../images/beverages/coffee_2.jpg); 
+}
+
+#gallery .main #gal_16 {
+    background-image: url(../images/burgers/burger_4.jpg); 
+}
+
+#gallery .main #gal_17 {
+    background-image: url(../images/cake/cake_2.jpg); 
+}
+
+#gallery .main #gal_18 {
+    background-image: url(../images/ice_cream/ice_cream_9.jpg); 
+}
+
+#gallery .main #gal_19 {
+    background-image: url(../images/ice_tea/ice_tea_5.jpg); 
+}
+
+#gallery .main #gal_20 {
+    background-image: url(../images/juices/apple_juice_1.jpg); 
+}
+
+#gallery .main #gal_21 {
+    background-image: url(../images/pizza/pizza_2.jpg); 
+}
+
+#gallery .main #gal_22 {
+    background-image: url(../images/beverages/milk_4.jpg); 
+}
+
+#gallery .main #gal_23 {
+    background-image: url(../images/cake/cupcake_2.jpg); 
+}
+
+#gallery .main #gal_24 {
+    background-image: url(../images/ice_cream/ice_cream_6.jpg); 
+}
+/*OUR FOOD GALLERY CSS CODE STARTS HERE*/
+
+
+
+
+
+/*CUSTOMERS' REVIEWS SECTION BEGINS HERE*/
+#preview .main .review {
+    flex: 1 1 20rem;
+    position: relative;
+    overflow: visible;
+    box-shadow: 0px 0px 10px grey;
+    border: 10px solid white;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    background-color: #333;
+    overflow: visible;
+    padding: 3%;
+    text-align: center;
+    margin-top: 100px;
+}
+
+#preview .main .review h3, .review q {
+    color: white;
+}
+
+#preview .main .review h3 {
+    font-size: 150%;
+    margin-bottom: 25px;
+}
+
+
+
+#preview .main .review img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 8px solid white;
+    position: relative;
+    display: block;
+    margin: -100px auto 20px auto;
+    box-shadow: 0px 0px 10px grey;
+}
+
+#preview .main .review .stars {
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+#preview .main .review .stars .fas, #preview .main .review .stars .far {
+    color: gold;
+    padding: 10px 0px;
+}
+
+/*CUSTOMERS' REVIEWS SECTION endS HERE*/
+
+
+
+
+
+/*ORDER NOW SECTION CSS STARTS HERE*/
+#order .main {
+    box-shadow: 0px 0px 15px lightgrey;
+    background-color: white;
+    margin: 20px 5%;
+    padding: 2%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border-radius: 0;
+}
+
+#order .main img {
+    flex: 1 1 25rem;
+    position: relative;
+    text-align: center;
+    width: 50%;
+    height: auto;
+}
+
+#order .main form {
+    flex: 1 1 25rem;
+    position: relative;
+    text-align: center;
+    width: 50%;
+    justify-content: space-between;
+    padding: 1%;
+}
+
+#order .main form input {
+    margin: 1% 1%;
+    color: grey;
+    border: 1px solid grey;
+    padding: 0.5rem;
+    
+}
+
+#order .main form input[type="text"],
+#order .main form input[type="email"],
+#order .main form input[type="number"],
+#order .main form input[type="textarea"] {
+    width: 100%;
+}
+
+#order .main form input[type="textarea"] {
+    height: 100px;
+    resize: none;
+}
+
+#order .main form input[type="submit"] {
+    padding: 10px;
+    border: 2px solid orangered;
+    color: orangered;
+    background-color: white;
+    cursor: pointer;
+    font-size: 120%;
+    border-radius: 10%;
+}
+
+#order .main form input[type="submit"]:hover {
+    background-color: orangered;
+    color: white;
+    box-shadow: 0px 0px 10px grey;
+}
+/*ORDER NOW SECTION CSS ENDS HERE*/
+
+
+
+
+
+/*SUBSCRIBE SECTION CSS STARTS HERE*/
+#subscribe {
+    border: 2px solid lightgrey;
+    background-color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 350px;
+    padding:  5% 0;
+}
+
+#subscribe h2 {
+    width: 350px;
+    text-align: center;
+    font-weight: lighter;
+}
+
+#subscribe input{
+    width: 400px;
+    padding: 1rem 0.5rem;
+    font-size: large;
+    border: 1px solid lightgrey;
+}
+
+#subscribe input[type="text"]:hover {
+    box-shadow: 0px 0px 5px orangered;
+}
+
+#subscribe input[type="submit"] {
+    background-color: orangered;
+    border: none;
+    color: #FFF;
+    cursor: pointer;
+    letter-spacing: 1.5px;
+}
+
+#subscribe input[type="submit"]:hover {
+    background-color: orange;
+} 
+/*SUBSCRIBE SECTION CSS ENDS HERE*/
+
+
+
+
+
+/*SCROLL TO TOP BUTTON CSS CODE BEGINS HERE*/
+#scroll-top {
+    position: fixed;
+    bottom: 50px; right: 2%;
+    padding: 1%;
+    border-radius: 10%;
+    color: white;
+    background-color: orangered;
+    box-shadow: 0px 0px 10px grey;
+    font-size: 200%;
+    z-index: 10;
+}
+
+#scroll-top:hover {
+    background-color: orange;
+}
+/*SCROLL TO TOP BUTTON CSS CODE ENDS HERE*/
+
+
+
+
+
+/*FOOTER CSS STARTS HERE*/
+footer {
+    width: 100%;
+    background-color: black;
+    color: white;
+    font-size: 100%;
+    margin-top: 75px;
+    padding: 3%;
+    text-align: center;
+}
+
+footer .contacts {
+    padding: 10px 5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+footer .contacts .contact {
+    margin: 10px 20px;
+    width: auto;
+    padding: 15px;
+    font-size: 100%;
+    color: white;
+    transition: all 0.5s linear;
+    -webkit-transition: all 0.5s linear;
+}
+
+footer .contacts .contact .fa-brands {
+    color: white;
+}
+
+
+footer .contacts .contact:hover {
+    border-bottom: 1px solid orangered;
+}
+
+footer .contacts .contact:hover .fa-brands {
+    color: orangered;
+}
+/*FOOTER CSS ENDS HERE*/
+
+
+
+
+
