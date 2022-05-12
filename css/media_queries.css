@@ -1,0 +1,115 @@
+/*MEDIA QUERIES*/
+@media screen and (max-width:991px) {
+
+    html {
+        font-size: 90%;
+    }
+
+    #home .slides img {
+        height: 350px;
+    }
+
+    
+}
+
+@media screen and (max-width:750px) {
+
+    html {
+        font-size: 85%;
+    }
+
+    nav #menu_bar {
+        display: initial;
+    }
+
+    nav .navbar {
+        position: absolute;
+        top: 100%; left: 0; right: 0;
+        background-color: #F7F7F7;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);   
+    }
+
+    nav .navbar.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);  
+    }
+
+    nav ul li {
+        display: block;
+        margin: 0.5%;
+        padding: 0%;
+        background-color: #FFF;
+        border-left: 5px solid orangered;
+        box-shadow: 0px 0px 5px lightgrey;
+    }
+
+    nav ul li a {
+        display: block;
+        margin: 0px;
+        padding: 10px 5px;
+    }
+    
+    #home #slide_1 {
+        padding-top: 0;
+    }
+
+    #home #slide_2 .writeup {
+        top: 0; right: 0;
+        padding: 50px 10%;
+    }
+
+    #home #slide_3 .writeup {
+        top: 0; right: 0;
+        padding: 10px 2%;
+    }
+
+    #home #slide_1 .writeup h1, 
+    #home #slide_1 .writeup p,
+    #home #slide_2 .writeup h1, 
+    #home #slide_2 .writeup p,
+    #home #slide_3 .writeup h1, 
+    #home #slide_3 .writeup p {
+        text-align: center;
+    }
+
+    #home #slide_2 .writeup,
+    #home #slide_3 .writeup {
+        width: 100%;
+    }
+
+    #home #slide_2 .writeup h1,
+    #home #slide_3 .writeup h1 {
+        text-align: center;
+        padding: 10px 5%;
+    }
+
+    #home #slide_3 .writeup h1 {
+        text-align: center;
+        padding: 10px 2%;
+    }
+
+    #home #slide_3 {
+        background-size: 280px 350px;
+        background-position: bottom center;
+    }
+}
+
+
+@media screen and (max-width:500px) {
+    html {
+        font-size: 80%;
+    }
+
+    #subscribe {
+        padding: 15% 0;
+    }
+
+    #subscribe h2, #subscribe input {
+        width: 70%;
+    }
+
+    footer .contacts {
+        display: flex;
+        flex-direction: column;
+        padding: 10px 20%;
+    }
+}
