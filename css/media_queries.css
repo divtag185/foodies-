@@ -99,6 +99,10 @@
         font-size: 80%;
     }
 
+    #home #slide_1 img {
+        height: 300px;
+    }
+
     #subscribe {
         padding: 15% 0;
     }
